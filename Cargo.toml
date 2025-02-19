@@ -17,6 +17,9 @@ A macro to generate structures which behave like bitflags.
 """
 exclude = ["/tests", "/.github"]
 
+[lib]
+crate-type = ["rlib", "dylib"]
+
 [dependencies]
 serde = { version = "1.0.103", optional = true, default-features = false }
 arbitrary = { version = "1.0", optional = true }
@@ -35,6 +38,7 @@ arbitrary = { version = "1.0", features = ["derive"] }
 bytemuck = { version = "1.12.2", features = ["derive"] }
 
 [features]
+default = ["std"]
 std = []
 example_generated = []
 rustc-dep-of-std = ["core", "compiler_builtins"]

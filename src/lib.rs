@@ -238,7 +238,6 @@ The result of `Flags::A ^ Flags::B` is `0b0000_0010`, which doesn't correspond t
 `Flags::A` or `Flags::B` even though it's still a known bit.
 */
 
-#![cfg_attr(not(any(feature = "std", test)), no_std)]
 #![cfg_attr(not(test), forbid(unsafe_code))]
 #![cfg_attr(test, allow(mixed_script_confusables))]
 
